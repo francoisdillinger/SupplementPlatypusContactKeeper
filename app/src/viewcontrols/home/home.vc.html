@@ -1,1 +1,24 @@
-<h1>Hello World!</h1>
+<div class="body">
+    <div id="content">
+        <div id="head">
+             <h1>Get them digits!</h1> 
+        </div>
+        <div>
+            <form>
+                <div>
+                    <plat-input plat-bind="name" type="text" placeholder="Name" required></plat-input>
+                    <plat-input plat-bind="num" type="text" placeholder="Number" required></plat-input>
+                    <plat-input plat-bind="email" type="text" placeholder="Email" required></plat-input>
+                </div>
+                <div>
+                    <button plat-tap="addThisContact()">Add New Contact</button>
+                </div>
+                    <!--<div ng-repeat="contact in contactList">
+                        <!--This is where I set the route parameter to the contact.name-->
+                        <!--<a href="#/contact/{{contact.name}}"><h3>{{contact.name}}</h3></a>-->
+                        <!--<plat-link plat-options='{view:}'></plat-link>
+                    </div>-->
+                </form>
+        </div>
+    </div>
+</div>
