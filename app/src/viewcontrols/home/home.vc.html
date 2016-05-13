@@ -4,17 +4,17 @@
              <h1>Get them digits!</h1> 
         </div>
         <div>
-                <div>
-                    <plat-input plat-bind="name" type="text" placeholder="Name" required></plat-input>
-                    <plat-input plat-bind="num" type="text" placeholder="Number" required></plat-input>
-                    <plat-input plat-bind="email" type="text" placeholder="Email" required></plat-input>
-                </div>
-                <div>
-                    <button plat-tap="ifInputIsValid()">Add New Contact</button>
-                </div>
-                    <div plat-control="plat-foreach" plat-context="eachContact">
-                        <h3 id="nameLink" plat-tap="getDeets(name)">{{name}}</h3>
-                    </div>
+            <div>
+                <plat-input plat-bind="name" type="text" placeholder="Name" required></plat-input>
+                <plat-input plat-bind="num" type="text" placeholder="Number" required></plat-input>
+                <plat-input plat-bind="email" type="text" placeholder="Email" required></plat-input>
+            </div>
+            <div>
+                <button plat-tap="ifInputIsValid()">Add New Contact</button>
+            </div>
+            <div plat-control="plat-foreach" plat-context="eachContact">
+                <h3 id="nameLink" plat-tap="getDeets(name)">{{name}}</h3>
+            </div>
         </div>
     </div>
 </div>
