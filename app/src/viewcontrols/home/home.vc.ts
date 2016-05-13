@@ -15,32 +15,24 @@ export default class HomeViewControl extends BaseViewControl {
         email: '',
         eachContact: this.contacts.contactList
     };
-    
-    addThisContact(){
+    ifInputIsValid(){
         let person = this.context.name;
         let phone = this.context.num;
         let mail = this.context.email;
-        
-        this.contacts.createNewContact(person,phone,mail);
-        
-        
-        
-        
-        // if(person == undefined || person == ''){
-        //     alert('Type a name');
-        // }
-        // else{
-        //     console.log(person, phone, mail);
-        //     this.navigator.navigate(ContactViewControl,{
-        //         // Here I am passing the input value as a parameter
-        //         parameters:{
-        //             person: person,
-        //         }
-        //     });
-        // }
+        if(person,phone,mail == undefined || person,phone,mail == ''){
+            alert('You need to enter in all contact information!');
+        }
+        else{
+            this.contacts.createNewContact(person,phone,mail);
+        }
     }
     getDeets(person:any){
-        this.contacts.getContactDetails(person);
+        this.navigator.navigate(ContactViewControl,{
+                // Here I am passing the input value as a parameter
+                parameters:{
+                    person: person,
+                }
+        });
     }
 }
 
